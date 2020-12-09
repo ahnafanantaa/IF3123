@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Domain Checks</title>
+</head>
+<body>
+<form name="myForm" action="" onsubmit="return validateForm()" method="POST">
+NIM <input type="text" id="nim" name="name"> NIM diharuskan 10 digit.<br> 
+Semester <input type="text" id="sem" name="sem"> Pada semester tidak boleh kurang dari 1 dan tidak lebih dari 12 <br>
+<input type="submit" value="Submit">
+</form>
+<script type="text/javascript"> 
+	function validateForm(){
+		var nim = document.myForm.nim.value; 
+		var sem = document.myForm.sem.value; 
+		if(nim.length != 10){
+			alert("NIM diharuskan 10 digit"); 
+			return false;
+		}
+		if((sem<1) ||  (sem>12)){
+			alert("Pada semester tidak boleh kurang dari 1 dan tidak lebih dari 1-12"); 
+			return false;
+		}
+		return true;
+	}
+</script>
+</body>
+<footer> 
+	<style type="text/css">
+    p { 
+      font-family: Segoe UI;
+      color: #aaa;
+	  position:absolute;
+	  bottom:0;
+	  width:100%;
+	  height:60px;   
+	 
+    }
+  </style>
+</footer>
+</html>
